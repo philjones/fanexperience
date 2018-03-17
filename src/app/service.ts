@@ -10,7 +10,26 @@ export class ContentfulService {
 
   constructor() { }
 
-  getProducts(query?: object): Promise<Entry<any>[]> {
+  public getPregame(): Promise<Entry<any>> {
+    return this.cdaClient.getEntry('4Ie7dfBNqwMkOGmCUcOMOg');
+  }
+
+  public getPostgame(): Promise<Entry<any>> {
+    return this.cdaClient.getEntry('4Ie7dfBNqwMkOGmCUcOMOg');
+  } 
+
+  public getAsset(id: string) {
+    return this.cdaClient.getEntry(id);
+  }
+
+  public getSections(query?: object): Promise<Entry<any>[]> {
+    return this.cdaClient.getEntries(Object.assign({
+      content_type: 'section'
+    }, query))
+    .then(res => res.items);
+  }
+
+  public getProducts(query?: object): Promise<Entry<any>[]> {
     return this.cdaClient.getEntries(Object.assign({
       content_type: 'section'//CONFIG.contentTypeIds.product
     }, query))
