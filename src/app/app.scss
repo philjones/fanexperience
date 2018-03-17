@@ -1,5 +1,28 @@
 // http://ionicframework.com/docs/v2/theming/
 
+.toolbar-background {
+    background-color: #134A8E;
+    //background-color: rgba(0, 0, 0, 0);
+}
+
+.toolbar-text {
+    color: white;
+}
+.toolbar[primary] .toolbar-title, .toolbar[primary] .bar-button-default {
+    color: white;
+  }
+
+//toolbar-md-title-text-color: white;
+$toolbar-md-title-text-color: white;
+$toolbar-ios-title-text-color: white;
+$toolbar-wp-title-text-color: white;
+.bar-button-default-md {
+    color: #fff;
+}
+
+.toolbar-title.toolbar-title-md, 
+.toolbar-title.toolbar-title-ios, 
+.toolbar-title.toolbar-title-wp { color: white; }
 
 // App Global Sass
 // --------------------------------------------------
