@@ -8,4 +8,9 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding id="page2"></ion-content>
+<ion-content padding id="page2">
+  <ion-card *ngFor="let section of Sections">
+    <ion-card-header>{{section.fields.name}}</ion-card-header>
+    <ion-card-content>{{section.fields.content}}</ion-card-content>
+  </ion-card>
+</ion-content>
